@@ -685,7 +685,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Open modal and fetch data
   document.getElementById("btnAnalysis").addEventListener("click", () => {
-    modal.show();
+    const modalEl = document.getElementById("mpAnalysisModal");
+    const analysisModal = new bootstrap.Modal(modalEl);
+    analysisModal.show();
+      
     if (mpData) {
       showProfileListForAnalysis();
     } else {
