@@ -208,31 +208,32 @@ document.addEventListener("scroll", function () {
 
 //////////////////
 document.addEventListener("DOMContentLoaded", function () {
-  const modal = document.getElementById("mpProfileModal");
-  const modalContent = document.getElementById("mpProfileContent");
   const mpProfileModalEl = document.getElementById("mpProfileModal");
   const mpProfileModal = new bootstrap.Modal(mpProfileModalEl);
-    
+  const modalContent = document.getElementById("mpProfileContent");
   let mpData = null;
 
-  document.addEventListener("click", function (event) {
-  const btn = event.target.closest("#mpProfileBtn");
-  if (!btn) return; // Click wasn't on the button
-
-  fetch("dataset/mp_profile.json")
-    .then(res => res.json())
-    .then(data => {
-      mpData = data;
+  // Open Profile modal
+  document.getElementById("mpProfileBtn").addEventListener("click", () => {
+    if (mpData) {
       showProfileList();
-      mpProfileModal.show();
-    })
-    .catch(err => {
-      document.getElementById("mpProfileContent").innerHTML =
-        "<div class='alert alert-danger'>Error loading MP data.</div>";
-      console.error("Fetch error:", err);
-    });
+      mpProfileModal.show(); // ✅ Bootstrap controls show/hide
+    } else {
+      fetch("dataset/mp_profile.json")
+        .then(res => res.json())
+        .then(data => {
+          mpData = data;
+          showProfileList();
+          mpProfileModal.show(); // ✅ Bootstrap controls show/hide
+        })
+        .catch(err => {
+          modalContent.innerHTML =
+            "<div class='alert alert-danger'>Error loading MP data.</div>";
+          console.error("Fetch error:", err);
+        });
+    }
   });
-  
+
   // Ensure button is clickable after page fully loads
   window.addEventListener("load", () => {
     // 1. Remove any loading overlay that might block clicks
@@ -723,6 +724,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.activeElement.blur(); // remove focus
   });
 });
+
 
 
 
