@@ -210,7 +210,9 @@ document.addEventListener("scroll", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("mpProfileModal");
   const modalContent = document.getElementById("mpProfileContent");
-  
+  const mpProfileModalEl = document.getElementById("mpProfileModal");
+  const mpProfileModal = new bootstrap.Modal(mpProfileModalEl);
+    
   let mpData = null;
 
   document.addEventListener("click", function (event) {
@@ -222,8 +224,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .then(data => {
       mpData = data;
       showProfileList();
-      const modalEl = document.getElementById("mpProfileModal");
-      new bootstrap.Modal(modalEl).show();
+      mpProfileModal.show();
     })
     .catch(err => {
       document.getElementById("mpProfileContent").innerHTML =
@@ -378,6 +379,10 @@ function showVideoDetails(profileId, youtubeId) {
       `<p class="text-muted">No comments available.</p>`}
   `;
 }
+    mpProfileModalEl.addEventListener("hidden.bs.modal", () => {
+    document.activeElement.blur(); // remove focus
+  });
+    
 });
 
 ///////////////////////
@@ -718,6 +723,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.activeElement.blur(); // remove focus
   });
 });
+
 
 
 
