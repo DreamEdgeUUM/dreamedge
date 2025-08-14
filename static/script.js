@@ -693,11 +693,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Open modal and fetch data
+    const analysisModalEl = document.getElementById("mpAnalysisModal");
+    const analysisModal = new bootstrap.Modal(analysisModalEl);
+    
   document.getElementById("btnAnalysis").addEventListener("click", () => {
-    const modalEl = document.getElementById("mpAnalysisModal");
-    const analysisModal = new bootstrap.Modal(modalEl);
     analysisModal.show();
-      
     if (mpData) {
       showProfileListForAnalysis();
     } else {
@@ -713,6 +713,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
   });
+    // Reset modal content and focus when closed
+    analysisModalEl.addEventListener("hidden.bs.modal", () => {
+      modalContent.innerHTML = ""; // clear old content
+      document.getElementById("btnAnalysis").focus(); // return focus to button
+    });
 });
+
 
 
