@@ -1,0 +1,179 @@
+{
+  "additionalStats": {
+    "majoriti": {
+      "GE14": 13009,
+      "GE15": 31584
+    },
+    "parlimen": {
+      "GE14": "P.006 Kubang Pasu",
+      "GE15": "P.006 Kubang Pasu"
+    },
+    "pengundi_jumlah": {
+      "GE14": 73860,
+      "GE15": 108217
+    },
+    "pengundi_tidak_hadir": {
+      "GE14": 12408,
+      "GE15": 23731
+    },
+    "peratus_keluar": {
+      "GE14": 83,
+      "GE15": 78
+    },
+    "rosak_vs_keseluruhan": {
+      "GE14": 1,
+      "GE15": 1
+    },
+    "rosak_vs_majoriti": {
+      "GE14": 8,
+      "GE15": 3
+    },
+    "state": {
+      "GE14": "Kedah",
+      "GE15": "Kedah"
+    },
+    "tidakhadir_vs_majoriti": {
+      "GE14": 95,
+      "GE15": 75
+    },
+    "undi_dalam_peti": {
+      "GE14": 61104,
+      "GE15": 84239
+    },
+    "undi_keluar_peti": {
+      "GE14": 61452,
+      "GE15": 84486
+    },
+    "undi_rosak": {
+      "GE14": 1118,
+      "GE15": 1084
+    },
+    "undi_tak_kembali": {
+      "GE14": 348,
+      "GE15": 247
+    },
+    "undi_tolak": {
+      "GE14": 770,
+      "GE15": 837
+    }
+  },
+  "demographics": {
+    "ageByDun": {
+      "N.05 Bukit Kayu Hitam": {
+        "18\u201329": 13620,
+        "30\u201339": 10406,
+        "40\u201349": 7639,
+        "50\u201359": 6137,
+        "60\u201369": 4700,
+        "70\u201379": 2481,
+        "80\u201389": 719,
+        "90+": 99
+      },
+      "N.06 Jitra": {
+        "18\u201329": 20877,
+        "30\u201339": 14543,
+        "40\u201349": 9450,
+        "50\u201359": 7582,
+        "60\u201369": 6171,
+        "70\u201379": 2794,
+        "80\u201389": 875,
+        "90+": 124
+      }
+    },
+    "ageGroups": {
+      "18\u201329": 34497,
+      "30\u201339": 24949,
+      "40\u201349": 17089,
+      "50\u201359": 13719,
+      "60\u201369": 10871,
+      "70\u201379": 5275,
+      "80\u201389": 1594,
+      "90+": 223
+    },
+    "ethnicity": {
+      "citizen": 501147,
+      "noncitizen": 17828,
+      "overall": 1037850
+    },
+    "gender": {
+      "female": 263679,
+      "male": 255196
+    }
+  },
+  "electionResults": {
+    "GE14": {
+      "parties": [
+        "PARTI KEADILAN RAKYAT (PKR)",
+        "BARISAN NASIONAL (BN)",
+        "PARTI ISLAM SE MALAYSIA (PAS)"
+      ],
+      "votes": [
+        29984,
+        16975,
+        13375
+      ]
+    },
+    "GE15": {
+      "parties": [
+        "PERIKATAN NASIONAL (PN)",
+        "PAKATAN HARAPAN (PH)",
+        "BARISAN NASIONAL (BN)",
+        "PARTI PEJUANG TANAHAIR (PEJUANG)"
+      ],
+      "votes": [
+        47584,
+        16000,
+        14489,
+        5329
+      ]
+    },
+    "extended": {
+      "GE14": {
+        "majoriti": 13009,
+        "parlimen": "P.006 Kubang Pasu",
+        "pengundi_jumlah": 73860,
+        "pengundi_tidak_hadir": 12408,
+        "peratus_keluar": 83.1999969482422,
+        "rosak_vs_keseluruhan": 1.8193061251057736,
+        "rosak_vs_majoriti": 8.594050272888,
+        "state": "Kedah",
+        "tidakhadir_vs_majoriti": 95.38012145437774,
+        "undi_dalam_peti": 61104,
+        "undi_keluar_peti": 61452,
+        "undi_rosak": 1118,
+        "undi_tak_kembali": 348,
+        "undi_tolak": 770
+      },
+      "GE15": {
+        "majoriti": 31584,
+        "parlimen": "P.006 Kubang Pasu",
+        "pengundi_jumlah": 108217,
+        "pengundi_tidak_hadir": 23731,
+        "peratus_keluar": 78.07091307280741,
+        "rosak_vs_keseluruhan": 1.2830528134838908,
+        "rosak_vs_majoriti": 3.4321175278622085,
+        "state": "Kedah",
+        "tidakhadir_vs_majoriti": 75.13614488348531,
+        "undi_dalam_peti": 84239,
+        "undi_keluar_peti": 84486,
+        "undi_rosak": 1084,
+        "undi_tak_kembali": 247,
+        "undi_tolak": 837
+      }
+    }
+  },
+  "mpInfo": {
+    "name": "Ku Abd Rahman Bin Ku Ismail",
+    "party": "PERIKATAN NASIONAL (PN)"
+  },
+  "voterSummary": {
+    "GE14": {
+      "registeredVoters": "73860",
+      "voterTurnout": "83.20%"
+    },
+    "GE15": {
+      "registeredVoters": "108217",
+      "voterTurnout": "78.07%"
+    }
+  }
+}
