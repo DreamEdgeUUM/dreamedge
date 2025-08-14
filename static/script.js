@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("./dataset/data.json") 
+    fetch("dataset/data.json") 
     .then(res => res.json())
     .then(data => {
       // MP info
@@ -210,7 +210,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const btn = event.target.closest("#mpProfileBtn");
   if (!btn) return; // Click wasn't on the button
 
-  fetch("./dataset/mp_profile.json")
+  fetch("dataset/mp_profile.json")
     .then(res => res.json())
     .then(data => {
       mpData = data;
@@ -690,7 +690,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (mpData) {
       showProfileListForAnalysis();
     } else {
-      fetch("./dataset/mp_profile.json")
+      fetch("dataset/mp_profile.json")
         .then(res => res.json())
         .then(data => {
           mpData = data; // contains profile, statements, videos, comments
@@ -703,3 +703,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
