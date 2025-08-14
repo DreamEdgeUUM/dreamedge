@@ -29,8 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         console.warn("No additionalStats found in response");
       }
-    
-    document.getElementById("mpProfileModal").style.display = "flex";
 
     });
 });
@@ -215,7 +213,8 @@ document.addEventListener("DOMContentLoaded", function () {
     .then(data => {
       mpData = data;
       showProfileList();
-      document.getElementById("mpProfileModal").style.display = "flex";
+      const modalEl = document.getElementById("mpProfileModal");
+      new bootstrap.Modal(modalEl).show();
     })
     .catch(err => {
       document.getElementById("mpProfileContent").innerHTML =
