@@ -713,12 +713,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
   });
-    // Reset modal content and focus when closed
-    analysisModalEl.addEventListener("hidden.bs.modal", () => {
-      modalContent.innerHTML = ""; // clear old content
-      document.getElementById("btnAnalysis").focus(); // return focus to button
-    });
+   // Close modal cleanup
+  mpAnalysisModalEl.addEventListener("hidden.bs.modal", () => {
+    document.activeElement.blur(); // remove focus
+  });
 });
+
 
 
 
