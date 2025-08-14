@@ -30,6 +30,15 @@ document.addEventListener("DOMContentLoaded", () => {
         console.warn("No additionalStats found in response");
       }
 
+        ["mpProfileModal", "mpAnalysisModal"].forEach(id => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.removeAttribute("style");     // <-- kills display:flex
+        el.classList.remove("show");
+        el.setAttribute("aria-hidden", "true");
+        el.removeAttribute("aria-modal");
+      });
+        
     });
 });
 
@@ -705,4 +714,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
 
